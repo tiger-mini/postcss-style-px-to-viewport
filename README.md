@@ -13,8 +13,6 @@ yarn add postcss-style-px-to-viewport -D
 
 ### Use
 
-vue-cli3
-
 ```javascript
 {
   chainWebpack: (config) => {
@@ -22,19 +20,20 @@ vue-cli3
       .rule('vue')
       .test(/\.vue$/)
       .use('style-vw-loader')
-        .loader('style-vw-loader')
+      .loader('style-vw-loader')
+      .option({
+          // ...
+      })
     }
 }
 ```
-
-vue-cli2
-
+或
 ```text
 {
     test: /\.(vue|jsx?)$/,
     loader: 'style-vw-loader',
     options: {
-       
+       // ...
     }
 }
 ```
@@ -58,7 +57,8 @@ loader转换后
 默认配置
 ```javascript
 defaultsProp = {
-  unitToConvert: 'px',
+  unitToConvert: 'px', 
+  ignoreUnitCase: true, // 默认会转换px、PX、Px、pX各个情况 如果设置为false 这只匹配 px
   viewportWidth: 375,
   unitPrecision: 5,
   viewportUnit: 'vw',

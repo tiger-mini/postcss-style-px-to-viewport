@@ -1,6 +1,6 @@
 {
   "name": "postcss-style-px-to-viewport",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "自实现一个webpack loader 将vue模板中行内样式的px单位转为vw单位",
   "main": "index.js",
   "scripts": {
