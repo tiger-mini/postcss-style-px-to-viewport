@@ -7,7 +7,7 @@ const stylePXRegExp = /(\d+)px/;
 let defaultsProp = {
     unitToConvert: 'px',
     ignoreUnitCase: true, // 转换单位是否忽略大小写
-    viewportWidth: 375,
+    viewportWidth: 750,
     unitPrecision: 5,
     viewportUnit: 'vw',
     fontViewportUnit: 'vw',
