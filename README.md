@@ -1,7 +1,7 @@
 # postcss-style-px-to-viewport
-自实现一个webpack loader 将vue模板中行内样式的px单位转为vw单位
-
 主要是弥补postcss-px-to-viewport对行内样式的不足
+
+自实现一个webpack loader 将vue模板中行内样式的px单位转为vw单位
 
 ### install
 
