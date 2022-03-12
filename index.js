@@ -6,6 +6,7 @@ const stylePXRegExp = /(\d+)px/;
 
 let defaultsProp = {
     unitToConvert: 'px',
+    ignoreUnitCase: true, // 转换单位是否忽略大小写
     viewportWidth: 375,
     unitPrecision: 5,
     viewportUnit: 'vw',
@@ -23,7 +24,7 @@ module.exports = function(source) {
         newSource = source.match(template)[0];
     }
 
-    const pxReg = new RegExp(stylePXRegExp.source, 'ig');
+    const pxReg = new RegExp(stylePXRegExp.source, dpo.ignoreUnitCase ? 'ig' : '');
     if(pxReg.test(newSource)) {
         const _source = newSource.replace(pxReg, createPxReplace(dpo.viewportWidth, dpo.minPixelValue, dpo.unitPrecision, dpo.viewportUnit))
         return source.replace(template, _source)
