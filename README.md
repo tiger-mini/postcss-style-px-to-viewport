@@ -32,7 +32,7 @@ Default Options
 ```
 查阅原配置 [postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport#usage)
 
-### webpack setting
+### webpack 配置
 ```
 {
   chainWebpack: (config) => {
