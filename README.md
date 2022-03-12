@@ -3,17 +3,37 @@
 
 自实现一个webpack loader 将vue模板中行内样式的px单位转为vw单位
 
-### install
 
-```npm
+## Getting Started
+
+### Installation
+Add via npm
+```
 npm install postcss-style-px-to-viewport --save-dev
-or
+```
+or yarn
+```
 yarn add postcss-style-px-to-viewport -D
 ```
 
-### Use
+### Usage
 
-```javascript
+Default Options
+```
+{
+  unitToConvert: 'px', 
+  ignoreUnitCase: true, // 默认会忽略大小写来转换unitToConvert的匹配值 如px、PX、Px、pX各个情况。如果设置为false 则只匹配 px
+  viewportWidth: 750,
+  unitPrecision: 5,
+  viewportUnit: 'vw',
+  fontViewportUnit: 'vw',
+  minPixelValue: 1
+}
+```
+查阅原配置 [postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport#usage)
+
+### webpack setting
+```
 {
   chainWebpack: (config) => {
       config.module
@@ -27,8 +47,8 @@ yarn add postcss-style-px-to-viewport -D
     }
 }
 ```
-或
-```text
+or
+```
 {
     test: /\.(vue|jsx?)$/,
     loader: 'postcss-style-px-to-viewport',
@@ -38,7 +58,7 @@ yarn add postcss-style-px-to-viewport -D
 }
 ```
 
-### Example
+## Example
 
 原vue模板代码片段
 ```html
@@ -53,19 +73,6 @@ loader转换后
 ![code](https://raw.githubusercontent.com/tiger-mini/assets/main/img/code.png)
 ![runtime](https://raw.githubusercontent.com/tiger-mini/assets/main/img/runtime.gif)
 
-### option
-默认配置
-```javascript
-defaultsProp = {
-  unitToConvert: 'px', 
-  ignoreUnitCase: true, // 默认会忽略大小写来转换unitToConvert的匹配值 如px、PX、Px、pX各个情况。如果设置为false 则只匹配 px
-  viewportWidth: 375,
-  unitPrecision: 5,
-  viewportUnit: 'vw',
-  fontViewportUnit: 'vw',
-  minPixelValue: 1
-}
-```
 
 ### 参与
 
