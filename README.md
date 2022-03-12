@@ -59,7 +59,7 @@ loader转换后
 ```javascript
 defaultsProp = {
   unitToConvert: 'px',
-  viewportWidth: 750,
+  viewportWidth: 375,
   unitPrecision: 5,
   viewportUnit: 'vw',
   fontViewportUnit: 'vw',
