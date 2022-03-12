@@ -1,5 +1,5 @@
 # postcss-style-px-to-viewport
-主要是弥补postcss-px-to-viewport未对行内样式处理
+主要是弥补postcss-px-to-viewport未对行内样式处理的不足
 
 自实现一个webpack loader 将vue模板中行内样式的px单位转为vw单位
 
@@ -40,7 +40,7 @@ yarn add postcss-style-px-to-viewport -D
 
 ### Example
 
-原HTML代码
+原vue模板代码片段
 ```html
 <div width="200px" style="font-size: 16px;">设置下文字大小 但是用的是style样式</div>
 ```
