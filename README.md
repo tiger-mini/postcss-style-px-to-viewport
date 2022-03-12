@@ -1,5 +1,5 @@
 # postcss-style-px-to-viewport
-主要是弥补postcss-px-to-viewport对行内样式的不足
+主要是弥补postcss-px-to-viewport未对行内样式处理
 
 自实现一个webpack loader 将vue模板中行内样式的px单位转为vw单位
 
@@ -19,8 +19,8 @@ yarn add postcss-style-px-to-viewport -D
       config.module
       .rule('vue')
       .test(/\.vue$/)
-      .use('style-vw-loader')
-      .loader('style-vw-loader')
+      .use('postcss-style-px-to-viewport')
+      .loader('postcss-style-px-to-viewport')
       .option({
           // ...
       })
@@ -31,7 +31,7 @@ yarn add postcss-style-px-to-viewport -D
 ```text
 {
     test: /\.(vue|jsx?)$/,
-    loader: 'style-vw-loader',
+    loader: 'postcss-style-px-to-viewport',
     options: {
        // ...
     }
