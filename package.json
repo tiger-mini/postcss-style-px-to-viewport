@@ -1,11 +1,16 @@
 {
   "name": "postcss-style-px-to-viewport",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "自实现一个webpack loader 将vue模板中行内样式的px单位转为vw单位",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "vue template",
+    "postcss style",
+    "px to vw"
+  ],
   "author": "yangb03",
   "license": "ISC",
   "dependencies": {
