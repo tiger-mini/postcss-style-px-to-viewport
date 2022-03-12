@@ -50,6 +50,10 @@ loader转换后
 <div width="53.33333vw" style="font-size: 4.26667vw;">设置下文字大小 但是用的是style样式</div>
 ```
 
+### 效果
+![code](./assets/code.png)
+![runtime](./assets/runtime.gif)
+
 ### option
 默认配置
 ```javascript
