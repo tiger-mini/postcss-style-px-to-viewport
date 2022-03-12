@@ -58,7 +58,7 @@ loader转换后
 ```javascript
 defaultsProp = {
   unitToConvert: 'px', 
-  ignoreUnitCase: true, // 默认会转换px、PX、Px、pX各个情况 如果设置为false 这只匹配 px
+  ignoreUnitCase: true, // 默认会忽略大小写来转换unitToConvert的配配置 如px、PX、Px、pX各个情况。如果设置为false 这只匹配 px
   viewportWidth: 375,
   unitPrecision: 5,
   viewportUnit: 'vw',
