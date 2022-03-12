@@ -24,7 +24,7 @@ module.exports = function(source) {
         newSource = source.match(template)[0];
     }
 
-    const pxReg = new RegExp(stylePXRegExp.source, dpo.ignoreUnitCase ? 'ig' : '');
+    const pxReg = new RegExp(stylePXRegExp.source, dpo.ignoreUnitCase ? 'ig' : 'g');
     if(pxReg.test(newSource)) {
         const _source = newSource.replace(pxReg, createPxReplace(dpo.viewportWidth, dpo.minPixelValue, dpo.unitPrecision, dpo.viewportUnit))
         return source.replace(template, _source)
