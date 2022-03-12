@@ -50,15 +50,15 @@ loader转换后
 ```
 
 ### 效果
-![code](./assets/code.png)
-![runtime](./assets/runtime.gif)
+![code](https://raw.githubusercontent.com/tiger-mini/assets/main/img/code.png)
+![runtime](https://raw.githubusercontent.com/tiger-mini/assets/main/img/runtime.gif)
 
 ### option
 默认配置
 ```javascript
 defaultsProp = {
   unitToConvert: 'px', 
-  ignoreUnitCase: true, // 默认会忽略大小写来转换unitToConvert的配配置 如px、PX、Px、pX各个情况。如果设置为false 这只匹配 px
+  ignoreUnitCase: true, // 默认会忽略大小写来转换unitToConvert的匹配值 如px、PX、Px、pX各个情况。如果设置为false 则只匹配 px
   viewportWidth: 375,
   unitPrecision: 5,
   viewportUnit: 'vw',
