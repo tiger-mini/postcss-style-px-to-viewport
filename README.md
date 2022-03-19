@@ -41,7 +41,7 @@ Default Options
       .test(/\.vue$/)
       .use('postcss-style-px-to-viewport')
       .loader('postcss-style-px-to-viewport')
-      .option({
+      .options({
           // ...
       })
     }
